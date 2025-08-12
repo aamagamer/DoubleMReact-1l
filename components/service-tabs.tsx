@@ -7,7 +7,7 @@ const services = [
   {
     id: "demand",
     title: "Demand & Reactive Services",
-    image: "/emergency-maintenance-repair.png",
+    image: "/Media/techo.jpeg", // Updated to use Media folder
     description:
       "These facilities maintenance services cover all labor trades we offer on a demand service response (2-hour emergency, 4-hour emergency, same day, and standard 24-48 hour onsite response).",
     features: [
@@ -26,7 +26,7 @@ const services = [
   {
     id: "preventative",
     title: "Preventative Maintenance",
-    image: "/preventative-maintenance-checklist.png",
+    image: "/Media/electrico.jpeg", // Updated to use Media folder
     description:
       "Preventive maintenance involves the systematic inspection of equipment and assets where potential problems are identified and proactively corrected to prevent equipment failure.",
     features: [
@@ -41,22 +41,15 @@ const services = [
   {
     id: "project",
     title: "Project & Program Rollout",
-    image: "/construction-project-team.png",
+    image: "/Media/interiorwork.jpeg", // Updated to use Media folder
     description:
       "We help clients achieve project goals and strategic objectives within specific timeframe and budget, improving efficiencies with technology and best practices.",
-    features: [
-      "High Traffic Painting",
-      "Restroom Refreshes",
-      "Fixture Upgrades",
-      "Demolition",
-      "Rebranding",
-      "Space Renovations",
-    ],
+    features: ["High Traffic Painting", "Restroom Refreshes", "Fixture Upgrades", "Demolition", "Rebranding"],
   },
   {
     id: "corrective",
     title: "Corrective Maintenance",
-    image: "/emergency-response-team.png",
+    image: "/Media/disaster.jpeg", // Updated to use Media folder
     description:
       "Corrective maintenance is performed to identify, isolate and rectify faults so that failed equipment can be restored to operational condition within established tolerances.",
     features: [
@@ -70,10 +63,10 @@ const services = [
   {
     id: "professional",
     title: "Professional Services",
-    image: "/placeholder-o175j.png",
+    image: "/Media/tablero.jpeg", // Updated to use Media folder
     description:
       "Implementing solutions to streamline real estate, design, construction, and maintenance projects, ensuring success on time and budget.",
-    features: ["Engineering", "Architectural", "Site Surveys", "Asset Collection", "Consulting", "Project Management"],
+    features: ["Engineering", "Architectural", "Site Surveys", "Asset Collection", "Consulting"],
   },
 ]
 
@@ -99,6 +92,7 @@ export function ServiceTabs() {
               key={service.id}
               variant={activeTab === service.id ? "default" : "outline"}
               onClick={() => setActiveTab(service.id)}
+              onMouseEnter={() => setActiveTab(service.id)}
               className={`px-6 py-3 text-sm font-medium transition-all duration-300 ${
                 activeTab === service.id
                   ? "bg-emerald-600 hover:bg-emerald-700 text-white"

@@ -6,19 +6,19 @@ import { Button } from "@/components/ui/button"
 
 const slides = [
   {
-    image: "/modern-office-maintenance.png",
+    image: "/Media/BannerIE.webp", // Updated to use Media folder
     title: "Process Efficiency",
     description:
       "Proven and repeatable approach for client on-boarding, contingency planning, performance management and service delivery.",
   },
   {
-    image: "/maintenance-team-working.png",
+    image: "/Media/BannerF.jpg", // Updated to use Media folder
     title: "Predictable Outcomes",
     description:
       "Consistency is key to building trust and achieving long-term success. Our proven methods reduce uncertainty, allowing you to plan with confidence.",
   },
   {
-    image: "/placeholder-crvog.png",
+    image: "/Media/BannerO.jpg", // Updated to use Media folder
     title: "Prepare for Emergencies",
     description:
       "Be ready for the unexpected with strategies that keep you one step ahead. Our 24/7 response ensures swift action that protects your assets.",
@@ -31,7 +31,7 @@ export function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 3000)
     return () => clearInterval(timer)
   }, [])
 
@@ -43,9 +43,7 @@ export function Hero() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
         <div className="container mx-auto px-4 py-3 flex items-center gap-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">DM</span>
-          </div>
+          <img src="/Media/logo.png" alt="Double M Electric Logo" className="w-12 h-12 object-contain" />
           <div>
             <h1 className="font-bold text-slate-800 text-lg leading-tight">Double M Electric</h1>
             <p className="text-sm text-slate-600">Facilities Maintenance - DFW Area</p>
