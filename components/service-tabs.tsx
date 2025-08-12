@@ -112,25 +112,38 @@ export function ServiceTabs() {
         {/* Content */}
         {activeService && (
           <div className="bg-white rounded-2xl p-8 text-slate-800 shadow-2xl">
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
-              <div>
+            <div className="grid lg:grid-cols-2 gap-8 items-start h-96">
+              <div className="h-full flex flex-col justify-between py-4">
                 <img
                   src={activeService.image || "/placeholder.svg"}
                   alt={activeService.title}
-                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  className="w-full h-88 object-cover rounded-xl shadow-lg"
                 />
               </div>
-              <div>
+              <div className="h-full flex flex-col py-4">
                 <h3 className="text-2xl font-bold text-slate-800 mb-4">{activeService.title}</h3>
                 <p className="text-slate-600 mb-6 leading-relaxed">{activeService.description}</p>
-                <ul className="space-y-3">
-                  {activeService.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0" />
-                      <span className="text-slate-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex-1 overflow-y-auto">
+                  {activeService.id === "demand" ? (
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-3">
+                      {activeService.features.map((feature, index) => (
+                        <div key={index} className="flex items-center gap-3">
+                          <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0" />
+                          <span className="text-slate-700">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <ul className="space-y-3">
+                      {activeService.features.map((feature, index) => (
+                        <li key={index} className="flex items-center gap-3">
+                          <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0" />
+                          <span className="text-slate-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             </div>
           </div>
