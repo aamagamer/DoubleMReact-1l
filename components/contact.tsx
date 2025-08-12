@@ -84,8 +84,17 @@ export function Contact() {
             {/* Map */}
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h4 className="text-lg font-semibold text-slate-800 mb-4">Our Service Area</h4>
-              <div className="aspect-video bg-slate-200 rounded-lg flex items-center justify-center">
-                <p className="text-slate-500">Interactive Map - DFW Area</p>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429168.10174069675!2d-97.06966983749998!3d32.82058980000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647678f!2sDallas%2C%20Texas%2C%20EE.%20UU.!5e0!3m2!1ses!2smx!4v1704067200000!5m2!1ses!2smx"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Dallas-Fort Worth Service Area"
+                />
               </div>
             </div>
           </div>
