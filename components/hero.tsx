@@ -54,7 +54,7 @@ export function Hero() {
       {/* Hero Carousel */}
       <section className="relative h-screen overflow-hidden">
         <div
-          className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
+          className="absolute inset-0 flex transition-transform duration-900 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {slides.map((slide, index) => (
